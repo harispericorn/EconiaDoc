@@ -143,3 +143,82 @@ Per place_market_order() and its associated wrappers, Econia supports taker-only
 ### Self match behavior
 
 Econia's matching engine supports configurable self match behavior, with a self match defined as a hypothetical fill where taker and maker assets are derived from the same market account. Hence since limit orders and market orders can both fill as a taker, they require one of the following self match behavior flags:
+
+orders -> escrow? => Econia
+
+price granularity is equivalent to the minimum price (in nominal terms) for a market.
+
+Econia's AVL queue implementation thus sets an upper bound on the number of price levels, as well as the number of total orders, allowed on a given side of the order book.
+
+underwriting
+
+https://econia.dev/overview/registry#recognized-markets
+
+https://econia.dev/overview/incentives
+Econia is a permissionless system that mitigates denial-of-service (DoS) attacks by charging utility coins for assorted operations.
+
+Econia also charges taker fees, denominated in the quote coin for a given market, which are distributed between integrators and Econia.
+
+Taker Fees
+When a market order is placed, it is often executed right away. This type of order takes away part of the existing liquidity on an order book for a security. Because this is unfavorable for exchanges as the liquidity of the security has decreased, exchanges charge taker fees to deter trades from removing existing pending orders. The amount of the taker fee is usually greater than the amount of the maker fee.
+
+Econia does not charge maker fees.
+
+Integrators can then withdraw any fees they have collected via withdraw_integrator_fees().
+
+https://econia.dev/overview/market-accounts
+because a trade cannot be placed until the actual underlying asset is deposited into Econia
+
+https://econia.dev/overview/matching
+For taker sells, conversely, no quote coins are passed in. Rather, the base asset is passed in and matched, then a portion of quote proceeds are deducted for fees.
+
+========================== Kevin's =========================
+
+Liquidity pool
+5000 token | 5000 USDT
+
+MM => thirdparty => to provide liquidity
+MM thru API give LP access to create volume/liquidity => low fee
+
+5000 USD per day 24H volume
+
+over a month
+
+6 accounts sell orders => 20% of volume => Propbase team
+
+Kev -> buy and selling
+
+prevent very large spikes
+
+need a base line
+encourage small buys and sells
+
+PROPS|USD
+40,000 | 40,000
+
+Problems:
+MEV, spiked charts
+similar to lofty - high sell, low buy
+
+ideal:
+1% slippage, 1% fee
+4 user trades per month
+
+Tier 1 => Luxumburg
+can trade in DOW|wyoming
+
+Obj:
+
+1. Create liquidity in Seconda
+2. PROPS utility
+3. Reduce volatility
+
+Continuous price change
+Arbitrage
+
+Trade Volume = Market Capital
+Last Trade = Estimated Value
+
+if im going to invest/buy => shorter period -> most volume
+if im going to look for 5yr investment => highest yield
+if im more riskier => smallest token/ market cap => undervalued now => after marketing => when price goes above => buys it

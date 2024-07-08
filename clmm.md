@@ -365,3 +365,21 @@ integrations = good
 Arbitrage = find arbitrage
 
 How we can utilize them in WG1708|USDC
+
+https://github.com/traderjoe-xyz/LB-Whitepaper/blob/main/Joe%20v2%20Liquidity%20Book%20Whitepaper.pdf
+
+Price, 𝑃 = ∆𝑦 / ∆𝑥
+
+price (P) is defined as the rate of change in
+Y reserves per change in X reserves. Price represents the value of the
+base asset (X) denominated in the quote asset (Y) terms.
+
+Bin Liquidity:
+Liquidity (L) is defined to be the nominal value of reserves deposited
+into a discrete bin and is denominated in the quote asset.
+𝑃𝑖· 𝑥 + 𝑦 = 𝐿
+
+(𝑦 / 𝑥)· 𝑥 + 𝑦 = 𝐿
+
+𝑦 + 𝑦 = 𝐿
+denominated in the quote asset (Y) terms
